@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #007bff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+        }
+        .container {
+            padding: 2rem;
+            text-align: center;
+        }
+        form {
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="file"] {
+            display: block;
+            margin: 1rem auto;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/sentiment">Sentiment Analysis</a>
+        <a href="/show_plot">Plotly Plot</a>
+        <a href="/show_world_map">World Map</a>
+        <a href="/upload_csv">Upload CSV</a>
+        <a href="/show_table">View CSV</a>
+    </div>
+    <div class="container">
+        <h1>Upload CSV File</h1>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="csv_file" accept=".csv" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
